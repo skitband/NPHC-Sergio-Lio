@@ -19,7 +19,8 @@ const Main = () => {
     await fetch("http://localhost:3004/employees")
       .then((response) => response.json())
       .then((data) => {
-        setEmployees(data)
+        let el = [...new Map(data.map(item => [item['empId'], item])).values()]
+        setEmployees(el)
       })
       .catch((error) => console.log(error));
   };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Form, Input } from 'antd';
+import { Modal, Form, Input, InputNumber  } from 'antd';
 
 const UpdateModal = ({ details, isVisible, onSave, onCancel }) => {
 
@@ -41,14 +41,8 @@ const UpdateModal = ({ details, isVisible, onSave, onCancel }) => {
             <Form.Item
                 name="empId"
                 label="Employee ID"
-                rules={[
-                    {
-                    required: true,
-                    message: 'This field is required',
-                    },
-                ]}
             > 
-                <Input />
+                <Input readOnly/>
             </Form.Item>
             <Form.Item
                 name="id"
@@ -90,7 +84,7 @@ const UpdateModal = ({ details, isVisible, onSave, onCancel }) => {
                     },
                 ]}
             > 
-                <Input />
+                <InputNumber  />
             </Form.Item>
         </Form>
         </Modal>

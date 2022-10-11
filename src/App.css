@@ -24,3 +24,7 @@
 .ant-pagination{
   margin-right: 10px !important;
 }
+
+.ant-input-number{
+  width: 100% !important;
+}
