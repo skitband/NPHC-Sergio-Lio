@@ -113,16 +113,18 @@ const MainContent = ({getEmp, empList, onDelete }) => {
   };
 
   const columns = [
-    { title: 'ID', dataIndex: 'id', key: 'id', width: 150 },
+    { title: 'ID', dataIndex: 'id', key: 'id', width: 150, className: 'id-column' },
     {
       title: 'EMPLOYEE ID',
       dataIndex: 'empId',
-      key: 'empId'
+      key: 'empId',
+      sorter: (a, b) => a.empId.length - b.empId.length,
     },
     {
       title: 'LOGIN ID',
       dataIndex: 'loginId',
-      key: 'loginId'
+      key: 'loginId',
+      sorter: (a, b) => a.loginId.length - b.loginId.length,
     },
     {
       title: 'NAME',
