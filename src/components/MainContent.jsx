@@ -99,17 +99,17 @@ const MainContent = ({getEmp, empList, onDelete }) => {
       }
     },
 
-    beforeUpload(file) {
-      const isCSV = file.type === 'csv';
-      if (!isCSV) {
-        message.error('You can only upload csv file!');
-      }
-      const isLt2M = file.size / 1024 / 1024 < 2;
-      if (!isLt2M) {
-        message.error('Image must smaller than 2MB!');
-      }
-      return isCSV && isLt2M;
-    }
+    // beforeUpload(file) {
+    //   const isCSV = file.type === '.csv';
+    //   if (!isCSV) {
+    //     message.error('You can only upload csv file!');
+    //   }
+    //   const isLt2M = file.size / 1024 / 1024 < 2;
+    //   if (!isLt2M) {
+    //     message.error('Image must smaller than 2MB!');
+    //   }
+    //   return isCSV && isLt2M;
+    // }
   };
 
   const columns = [
